@@ -1,3 +1,0 @@
-mdl_context_temp
-mdl_filter_config
-view_mdl_question_categories
