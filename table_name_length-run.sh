@@ -1,7 +1,13 @@
 #!/bin/bash
+
+rm -rf table_name_big.csv
+rm -rf table_name_small.csv
+
+touch table_name_big.csv
+touch table_name_small.csv
+
 while read line;
 do
-line=$(echo -e $line | sed 's/^[" \t]*//;s/[" \t]*$//')
-#echo $line
-. ./table_name_length.sh $line;
+#echo "$line"
+. ./table_name_length.sh "$line";
 done < $1

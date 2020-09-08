@@ -1,15 +1,31 @@
 #!/bin/bash
 
+line=$(echo -e $1 | sed 's/^[" \t]*//;s/[" \t]*$//')
+
 date=$(date '+%Y%m%d')
+
+################################################################################
 #Name that adds to the original table name to become new table name
-temp_name="${date}"
 
+#small table names
+#temp_name="${date}"
+
+#large table names
+temp_name="d"
+
+################################################################################
 #Name that adds to the original table name to become a middle temp name
-temp_name_mid="${date}_temp"
 
-table_name=$(echo "$1" | awk -F '","' '{print $1}')
-column_name=$(echo "$1" | awk -F '","' '{print $2}')
-column_type=$(echo "$1" | awk -F '","' '{print $3}')
+#small table names
+#temp_name_mid="${date}_temp"
+
+#small table names
+temp_name_mid="t"
+
+
+table_name=$(echo "$line" | awk -F '","' '{print $1}')
+column_name=$(echo "$line" | awk -F '","' '{print $2}')
+column_type=$(echo "$line" | awk -F '","' '{print $3}')
 
 #echo table=$table_name
 
