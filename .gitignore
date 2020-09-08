@@ -1,0 +1,10 @@
+*
+
+!*/
+
+#!.gitignore
+!*/*.csv.example
+!*/*.sql.example
+!*/*.txt.example
+!*/*.out.example
+!*/*.sh
